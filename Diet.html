@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diet Plan Form</title>
+  <link rel="icon" type="image/x-icon" href="/christmas-stars.png">
+  <link rel="stylesheet" href="diet.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Smart Diet Planner</div>
+          <div class="subtitle">Fill the form for personalized meal plan</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <div class="card">
+        <form action="#" method="post">
+
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="grid grid-3">
+              <div class="form-row">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="e.g., Akhil Kalisetti" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-row">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="date" required />
+              </div>
+              <div class="form-row">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                  <option value="" selected disabled>Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Non-binary</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="country">Country</label>
+                <input id="country" name="country" type="text" placeholder="India" />
+              </div>
+              <div class="form-row">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="Your city" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Health Metrics -->
+          <fieldset>
+            <legend>Health Metrics</legend>
+            <div class="grid grid-3">
+              <div class="form-row">
+                <label for="height">Height (cm)</label>
+                <input id="height" name="height" type="number" min="100" max="250" placeholder="170" required />
+              </div>
+              <div class="form-row">
+                <label for="weight">Weight (kg)</label>
+                <input id="weight" name="weight" type="number" min="30" max="250" placeholder="65" required />
+              </div>
+              <div class="form-row">
+                <label for="activity">Activity Level</label>
+                <select id="activity" name="activity" required>
+                  <option value="" selected disabled>Choose level</option>
+                  <option>Sedentary (little or no exercise)</option>
+                  <option>Light (1-3 days/week)</option>
+                  <option>Moderate (3-5 days/week)</option>
+                  <option>Active (6-7 days/week)</option>
+                  <option>Very Active (intense or physical job)</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="form-row">
+                <label for="goal">Primary Goal</label>
+                <select id="goal" name="goal" required>
+                  <option value="" selected disabled>Select goal</option>
+                  <option>Weight Loss</option>
+                  <option>Maintenance</option>
+                  <option>Muscle Gain</option>
+                  <option>Improve Energy</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="dietType">Preferred Diet Type</label>
+                <select id="dietType" name="dietType">
+                  <option>Balanced</option>
+                  <option>Vegetarian</option>
+                  <option>Vegan</option>
+                  <option>Low Carb</option>
+                  <option>High Protein</option>
+                  <option>Mediterranean</option>
+                </select>
+              </div>
+            </div>
+            <p class="hint">These details help estimate your calorie needs and plan macro balance.</p>
+          </fieldset>
+
+          <!-- Dietary Preferences & Allergies -->
+          <fieldset>
+            <legend>Dietary Preferences and Allergies</legend>
+            <div class="grid grid-2">
+              <div>
+                <div class="row" style="margin-bottom:8px"><span class="tag">Preferences</span></div>
+                <div class="grid grid-2">
+                  <label class="row"><input type="checkbox" name="pref" value="dairy-free"> Dairy-free</label>
+                  <label class="row"><input type="checkbox" name="pref" value="low-sugar"> Low sugar</label>
+                  <label class="row"><input type="checkbox" name="pref" value="low-sodium"> Low sodium</label>
+                  <label class="row"><input type="checkbox" name="pref" value="egg-free"> Egg-free</label>
+                  <label class="row"><input type="checkbox" name="pref" value="nut-free"> Nut-free</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="allergies">Allergies / Foods to Avoid</label>
+                <textarea id="allergies" name="allergies" placeholder="e.g., peanuts, shellfish, lactose"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Daily Meal Plan -->
+          <fieldset>
+            <legend>Daily Meal Plan Inputs</legend>
+            <div class="grid grid-2">
+              <div class="form-row">
+                <label for="mealsPerDay">Meals per day</label>
+                <select id="mealsPerDay" name="mealsPerDay">
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="budget">Daily Budget (₹)</label>
+                <input id="budget" name="budget" type="number" min="0" step="10" placeholder="300" />
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="form-row">
+                <label for="cuisine">Preferred Cuisine</label>
+                <input id="cuisine" name="cuisine" type="text" placeholder="e.g., South Indian, North Indian" />
+              </div>
+              <div class="form-row">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" placeholder="Any special timing, fasting windows, or dislikes"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Actions -->
+          <div class="actions">
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn primary">Generate Plan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+   <footer>
+     <p><center>This Form is developed by Akhil Kalisetti <img aria-label="footer-star-icon" src="./christmas-stars.png" height="15px" width="15px"/></center></p>
+  </footer>
+ 
+</body>
+</html>
